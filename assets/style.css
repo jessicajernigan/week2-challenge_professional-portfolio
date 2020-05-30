@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: ivory;
+}
+
+section {
+  padding: 20px 0;
+}
+
+header {
+  padding: 20px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 108, 74, .75);
+  z-index: 100;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  color: wheat;
+}
+
+header a {
+  text-decoration: none;
+  color: wheat;
+}
+
+header nav {
+  margin: 7px 0;
+  color: wheat;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  padding: 10px 15px;
+  font-weight: lighter;
+  font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li a:hover {
+  /* background: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 15px; */
+  text-shadow: none;
+}
+
+/* Hero Image */
+.hero {
+  height: 400px;
+  width: 100%;
+  background-image: url("./images/palmfronds.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.page-content {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 50px 0 100px 0;
+  
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.section-heading {
+  width: 20%;
+  padding: 20px;
+  text-align: right;
+  border-right: 5px solid darkgray;
+}
+
+.section-heading h2 {
+  padding: 20px;
+  font-size: 36px;
+}
+
+.about-me-text {
+  padding: 30px;
+  width: 80%;
+  align-content: center;
+}
+
+.flex-row {
+  display: block;
+}
+
+.side-border {
+  border-right: 4px dotted darkgray;
+}
+
+
