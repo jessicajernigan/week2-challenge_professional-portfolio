@@ -12,7 +12,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgb(238, 238, 207);
+  background-color: rgb(246, 255, 255);
 }
 
 section {
@@ -31,7 +31,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: rgba(27, 89, 69, 0.75);
+  background-color: rgba(27, 67, 89, 0.75);
   z-index: 100;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
@@ -124,6 +124,25 @@ header nav ul li a:hover {
   background-color: gray;
   border: solid black;
   border-radius: 10%;
+  border: 4px solid gray;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-img {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  padding: 15px;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
 }
 
 .project1 {
@@ -131,6 +150,11 @@ header nav ul li a:hover {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
+}
+
+.project-img-1 {
+  background-image: url("../images/hero-bg (1).jpg");
+  background-size: cover;
 }
 
 
@@ -159,13 +183,61 @@ header nav ul li a:hover {
   align-content: center;
 }
 
-.flex-row {
-  display: block;
-}
-
 .side-border {
   border-right: 4px dotted darkgray;
 }
+
+/* .flex-row {
+  display: block;
+} */
+
+.contact {
+  margin: 50px auto;
+  padding-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 1 100px;
+}
+
+.contact-item {
+  align-self: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.contact-item a {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(33, 52, 35);
+}
+
+.contact-item a:hover {
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.75);
+}
+
+.contact-info {
+  flex: 2 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contact-text {
+  flex: 12;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .interests-sidebar {
   margin-right: 20px;
