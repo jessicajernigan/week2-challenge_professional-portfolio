@@ -7,6 +7,7 @@
 :root {
   --light-text: rgb(230, 255, 248);
   --shadow: rgba(94, 94, 94, 0.75);
+  --darkshadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -20,7 +21,7 @@ section {
 }
 
 h1 {
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-shadow: var(--darkshadow);
 }
 
 h2 {
@@ -104,12 +105,12 @@ header nav ul li a:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-
 .page-content {
   max-width: 1080px;
   margin: 0 auto;
   padding: 20px 0 100px 0;
 }
+
 
 /* Begin 'My Work' styles */
 .projects-grid-container {
@@ -117,7 +118,7 @@ header nav ul li a:hover {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-gap: 10px;
 }
 
@@ -139,18 +140,15 @@ header nav ul li a:hover {
   padding: 15px;
   align-items: flex-end;
   position: relative;
-  overflow: hidden;
 }
 
 .project-content-small {
   display: flex;
   align-items: flex-end;
   position: relative;
-  overflow: hidden;
 }
 
 .project-card {
-  background: gray;
   padding: 15px;
   margin-bottom: 10px;
   position: relative;
@@ -163,9 +161,17 @@ header nav ul li a:hover {
 
 .card-text {
   background-color: var(--shadow);
-  text-align: center;
-  padding: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-top: auto;
+  width: auto;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.card-text:hover {
+  width: 110%;
+  height: 110%;
+  position: relative;
 }
 
 .card-text h3 {
@@ -191,8 +197,8 @@ header nav ul li a:hover {
 .project2 {
   grid-column-start: 4;
   grid-column-end: 6;
-  grid-row-start: -5;
-  grid-row-end:-5;
+  grid-row-start: -4;
+  grid-row-end:-3;
   background-image: url("./images/horiseon.png");
   background-size: 100%;
   background-position: 75% 50%;
@@ -202,9 +208,9 @@ header nav ul li a:hover {
 .project3 {
   grid-column-start: 4;
   grid-column-end: 6;
-  grid-row-start: -4;
-  grid-row-end:-3;
-  background-image: url("./images/horiseon.png");
+  grid-row-start: -3;
+  grid-row-end:-2;
+  background-image: url("./images/random.png");
   background-size: 100%;
   background-position: 75% 50%;
   background-repeat: no-repeat;
@@ -213,8 +219,8 @@ header nav ul li a:hover {
 .project4 {
   grid-column-start: 4;
   grid-column-end: 6;
-  grid-row-start: -3;
-  grid-row-end:-2;
+  grid-row-start: -2;
+  grid-row-end:-1;
   background-image: url("./images/dogs.png");
   background-size: 100%;
   background-position: 75% 50%;
@@ -228,11 +234,17 @@ header nav ul li a:hover {
   width: 100%;
 }
 
+.flex-row {
+  display: flex;
+}
+
 .section-heading {
   width: 20%;
   padding: 25px;
   text-align: right;
   border-right: 4px dotted darkgray;
+  min-width: auto;
+  padding-inline-end: inherit;
 }
 
 .section-heading h2 {
@@ -243,6 +255,7 @@ header nav ul li a:hover {
 .section-content {
   padding: 50px;
   width: 80%;
+  flex-wrap: wrap;
 }
 
 
@@ -279,9 +292,90 @@ header nav ul li a:hover {
 
 
 
+/* Begin Media Queries */
+/* MOBILE PHONES AND SMALLER */
+
+@media screen and (max-width: 980px) {
+
+header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
+}
+
+header h1 {
+  width: 100%;
+  text-align: center;
+}
+
+header nav ul {
+  margin-top: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+header nav ul li a {
+  font-size: 20px;
+}
 
 
+/* .moi {
+  align-items: center;
+  position: center;
+} */
+
+.section-heading {
+  width: 80%;
+  text-align: center;
+  padding: 5px;
+  margin: none;
+  border-right-width: 0;
+  border-bottom: 4px dotted darkgray;
+}
+
+.moi {
+  width: 250px;
+  display: inline-flex;
+}
+
+.moi img {
+  width: 100%;
+  border-radius: 10%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.page-content {
+  margin: 0 auto;
+}
 
 
+@media screen and (max-width:768px) {
+  section {
+      padding: 30px 15px;
+  }
 
+#about-me {
+    flex: 1 100%;
+    text-align: center;
+}
 
+.step-info {
+    flex: 2 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.step-img {
+    flex: 0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.step-text {
+    flex: 100%;
+}
+
+.trainer-img h3, .trainer-img h3, .trainer-img h4, .trainer-img::after {
+    display: none;
+}
