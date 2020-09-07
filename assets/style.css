@@ -219,9 +219,9 @@ header nav ul li a:hover {
   grid-column-end: 6;
   grid-row-start: -2;
   grid-row-end:-1;
-  background-image: url("./images/dogs.png");
-  background-size: 100%;
-  background-position: 75% 50%;
+  background-image: url("./images/famspace.png");
+  background-size: 80%;
+  background-position: 25% 0%;
   background-repeat: no-repeat;
 }
 
